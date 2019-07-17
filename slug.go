@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/qor/admin"
-	"github.com/qor/qor"
-	"github.com/qor/qor/resource"
-	"github.com/qor/qor/utils"
-	"github.com/qor/validations"
+	"github.com/kisrobot/admin"
+	"github.com/kisrobot/qor"
+	"github.com/kisrobot/qor/resource"
+	"github.com/kisrobot/qor/utils"
+	"github.com/kisrobot/validations"
 )
 
 // Slug is a scanner, could be used as field type, then this field could be used as slug field
@@ -39,7 +39,7 @@ func (Slug) ConfigureQorMeta(meta resource.Metaor) {
 	if meta, ok := meta.(*admin.Meta); ok {
 		res := meta.GetBaseResource().(*admin.Resource)
 
-		res.GetAdmin().RegisterViewPath("github.com/qor/slug/views")
+		res.GetAdmin().RegisterViewPath("github.com/kisrobot/slug/views")
 		res.UseTheme("slug")
 
 		slugMetaName := meta.Name
